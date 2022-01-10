@@ -56,7 +56,9 @@
 #define CONFIG_SYS_LOADS_BAUD_CHANGE
 #define CONFIG_SERIAL1				1
 #define CONFIG_CONS_INDEX			1
+#ifndef CONFIG_BAUDRATE
 #define CONFIG_BAUDRATE				115200
+#endif
 
 /*
  * BOOTP options
@@ -96,7 +98,9 @@
 #define CONFIG_CMD_MTDPARTS
 #endif
 
+#ifndef CONFIG_BOOTARGS
 #define CONFIG_BOOTARGS			"console=ttyS4,115200n8 root=/dev/ram rw"
+#endif
 
 #define CONFIG_AST_SPI_NOR    /* AST SPI NOR Flash */
 #define CONFIG_FMC_CS			1
